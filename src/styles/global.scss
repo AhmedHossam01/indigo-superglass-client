@@ -1,5 +1,45 @@
+// ANCHOR: Bootstrap
+@import "../..//node_modules/bootstrap/scss/functions";
+@import "../..//node_modules/bootstrap/scss/variables";
+@import "../..//node_modules/bootstrap/scss/mixins";
+
+@import "../..//node_modules/bootstrap/scss/grid";
+@import "../..//node_modules/bootstrap/scss/navbar";
+@import "../..//node_modules/bootstrap/scss/nav";
+
 // ANCHOR: Typography
 
 body {
   font-family: "Montserrat", sans-serif;
+}
+
+// ANCHOR: Debugging
+
+$debugging: true;
+
+@if $debugging {
+  * * {
+    background-color: #89a81e;
+  } /* Green */
+  * * * {
+    background-color: #f34607;
+  } /* Orange */
+  * * * * {
+    background-color: #5984c3;
+  } /* Blue */
+  * * * * * {
+    background-color: #cd1821;
+  } /* Red */
+  * * * * * * {
+    background-color: #89a81e;
+  } /* Green */
+  * * * * * * * {
+    background-color: #f34607;
+  } /* Orange */
+  * * * * * * * * {
+    background-color: #5984c3;
+  } /* Blue */
+  * * * * * * * * * {
+    background-color: #cd1821;
+  } /* Red */
 }

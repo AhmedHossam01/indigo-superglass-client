@@ -35,8 +35,3 @@ $color-white: white;
     @content;
   }
 }
-@mixin xs {
-  @media (max-width: 334px) {
-    @content;
-  }
-}
