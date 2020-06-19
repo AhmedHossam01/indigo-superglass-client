@@ -1,0 +1,42 @@
+// ANCHOR: Variables
+$color-primary-1: #50d890;
+$color-primary-2: #4f98ca;
+
+$color-secondary: #747474;
+
+$color-warning: #fd5e53;
+
+$color-light-1: #effffb;
+$color-light-2: #f6f6f6;
+
+$color-dark: #272727;
+
+$color-white: white;
+
+// ANCHOR: Mixins
+
+@mixin sm {
+  @media (min-width: 576px) {
+    @content;
+  }
+}
+@mixin md {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+@mixin lg {
+  @media (min-width: 992px) {
+    @content;
+  }
+}
+@mixin xl {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
+@mixin xs {
+  @media (max-width: 334px) {
+    @content;
+  }
+}
