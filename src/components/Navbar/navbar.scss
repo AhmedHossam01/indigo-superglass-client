@@ -37,6 +37,8 @@
     text-transform: uppercase;
     position: relative;
 
+    // TODO: Change font-family to Open Sand and load it
+
     &:not(:last-of-type) {
       margin-bottom: 0.5rem;
     }

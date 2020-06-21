@@ -1,7 +1,17 @@
-// ANCHOR: Typography
+@import "./utils";
 
+// ANCHOR: Typography
 body {
   font-family: "Montserrat", sans-serif;
+}
+
+.heading-1 {
+  color: $color-dark-2;
+  margin: 0;
+  line-height: 1.5;
+  font-weight: bold;
+  font-size: 4rem;
+  text-transform: capitalize;
 }
 
 // ANCHOR: Debugging
