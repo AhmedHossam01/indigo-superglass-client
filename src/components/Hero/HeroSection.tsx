@@ -11,13 +11,26 @@ const HeroSection = () => {
         <Row>
           <Col>
             <div className="hero">
-              <h2 className="heading-1">test</h2>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Voluptatum adipisci distinctio aspernatur, ullam eveniet quidem
-              quibusdam ratione id! Maiores, similique? Lorem ipsum dolor sit
-              amet consectetur adipisicing elit. Recusandae, doloremque? Lorem
-              ipsum dolor, sit amet consectetur adipisicing elit. Corporis,
-              atque.
+              {/* NOTE: w-50 to simulate d-flex */}
+              <div className="w-50">
+                <h2 className="heading-1">test</h2>
+
+                <div className="d-flex align-items-center">
+                  <span
+                    style={{ fontSize: ".8rem" }}
+                    className="mr-2 font-weight-light"
+                  >
+                    FROM
+                  </span>
+                  <span className="hero__price">$32.00</span>
+                </div>
+
+                <p className="paragraph mt-4">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam
+                  perferendis dolorum voluptatem aut quos voluptates unde iure
+                  earum, quod vero.
+                </p>
+              </div>
             </div>
           </Col>
         </Row>

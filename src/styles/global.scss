@@ -10,8 +10,14 @@ body {
   margin: 0;
   line-height: 1.5;
   font-weight: bold;
-  font-size: 4rem;
+  font-size: 4.5rem;
   text-transform: capitalize;
+}
+
+.paragraph {
+  color: $color-dark;
+  font-weight: 300;
+  line-height: 1.5;
 }
 
 // ANCHOR: Debugging
