@@ -1,2 +1,115 @@
+@import "../../styles/utils";
+
 .navbar {
+  &__logo {
+    width: 5rem;
+  }
+
+  &__toggler {
+    border: 0;
+    &:active,
+    &:hover {
+      border: 0;
+      outline: none;
+    }
+  }
+
+  &-collapse {
+    background-color: $color-light-1;
+    padding: 1rem 2rem;
+
+    @include lg {
+      background-color: $color-white;
+      padding: 0;
+    }
+  }
+}
+
+.nav {
+  // general (typographu)
+  @include lg {
+    align-items: center;
+  }
+
+  &__link {
+    color: $color-dark;
+    font-size: 1rem;
+    text-transform: uppercase;
+    position: relative;
+
+    &:not(:last-of-type) {
+      margin-bottom: 0.5rem;
+    }
+
+    @include lg {
+      &:not(:last-of-type) {
+        margin-bottom: 0;
+        margin-right: 2rem;
+      }
+    }
+
+    // reset
+    &:hover,
+    &:active {
+      color: $color-dark;
+      text-decoration: none;
+    }
+
+    // The underline
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -0.5rem;
+      left: -10%;
+      height: 0.5rem;
+      width: 0;
+      background-color: $color-primary-1;
+      transition: all 0.1s;
+
+      display: none;
+
+      @include lg {
+        display: block;
+      }
+    }
+
+    &:hover {
+      &::after {
+        width: 120%;
+      }
+    }
+
+    &--active {
+      color: $color-dark;
+      font-weight: bold;
+
+      &::after {
+        width: 120%;
+      }
+    }
+  }
+
+  &__icons-container {
+    display: flex;
+    flex-direction: row;
+    margin-top: 1rem;
+    justify-content: center;
+
+    @include lg {
+      flex-direction: column;
+      margin-top: 0; // reset
+    }
+  }
+
+  &__icon {
+    transition: all 0.1s;
+
+    &:not(:last-of-type) {
+      margin-right: 0.5rem;
+    }
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
 }
