@@ -1,36 +1,58 @@
-import React from "react";
-import "./hero.scss";
+import React, { useRef } from "react";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import SliderItem from "./SliderItem";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import "./hero.scss";
+import Slider from "react-slick";
+import { ArrowButtonNext, ArrowButtonPrev } from "./ArrowButton";
 
 const HeroSection = () => {
+  const ref: any = useRef(document.createElement("div"));
+
+  const goToNext = () => ref.current.slickNext();
+  const goToPrev = () => ref.current.slickPrev();
+
+  const settings = {
+    infinite: true,
+    speed: 300,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    dots: true,
+    draggable: true,
+  };
+
   return (
     <section>
       <Container>
         <Row>
           <Col>
             <div className="hero">
-              {/* NOTE: w-50 to simulate d-flex */}
-              <div className="w-50">
-                <h2 className="heading-1">test</h2>
+              <ArrowButtonNext action={goToNext} />
+              <ArrowButtonPrev action={goToPrev} />
 
-                <div className="d-flex align-items-center">
-                  <span
-                    style={{ fontSize: ".8rem" }}
-                    className="mr-2 font-weight-light"
-                  >
-                    FROM
-                  </span>
-                  <span className="hero__price">$32.00</span>
-                </div>
+              <Slider ref={ref} {...settings}>
+                <SliderItem
+                  title="Fixtures"
+                  description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas
+                excepturi quisquam error mollitia nemo in hic voluptatibus
+                obcaecati unde cum."
+                  image="images/fixture.png"
+                  price="32.00"
+                />
 
-                <p className="paragraph mt-4">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam
-                  perferendis dolorum voluptatem aut quos voluptates unde iure
-                  earum, quod vero.
-                </p>
-              </div>
+                <SliderItem
+                  title="Fixtures"
+                  description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas
+                excepturi quisquam error mollitia nemo in hic voluptatibus
+                obcaecati unde cum."
+                  image="images/fixture.png"
+                  price="32.00"
+                />
+              </Slider>
             </div>
           </Col>
         </Row>

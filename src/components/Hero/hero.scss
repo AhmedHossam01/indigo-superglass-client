@@ -1,15 +1,48 @@
 @import "../../styles/utils";
 
 .hero {
-  padding: 3rem 2rem;
+  padding: 2rem 0;
   background-color: $color-light-1;
   border-radius: 5px;
   margin-top: 1rem;
   box-shadow: 0 0 40px -10px rgba($color: #000000, $alpha: 0.1);
+  position: relative;
+
+  @include md {
+    padding: 3rem 2rem;
+  }
 
   &__price {
     font-weight: bold;
     font-size: 1.5rem;
     color: $color-primary-1;
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+
+    @include lg {
+      margin-bottom: 0; // reset
+    }
+
+    @include sm {
+      height: 20rem;
+      margin-bottom: 5rem;
+    }
+  }
+}
+
+// For Slider Arrow
+.arrow-button {
+  border: 0;
+  width: 2.5rem;
+  height: 2.5rem;
+  background: rgba(0, 0, 0, 0.1);
+  display: none;
+
+  @include md {
+    display: block;
   }
 }

@@ -5,6 +5,18 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
+html {
+  font-size: 12px;
+
+  @include sm {
+    font-size: 14px;
+  }
+
+  @include lg {
+    font-size: 16px;
+  }
+}
+
 .heading-1 {
   color: $color-dark-2;
   margin: 0;
@@ -12,6 +24,15 @@ body {
   font-weight: bold;
   font-size: 4.5rem;
   text-transform: capitalize;
+}
+
+.heading-2 {
+  font-weight: 500;
+  font-size: 2rem;
+  line-height: 1.5;
+  text-transform: capitalize;
+  margin: 0;
+  color: $color-dark;
 }
 
 .paragraph {
