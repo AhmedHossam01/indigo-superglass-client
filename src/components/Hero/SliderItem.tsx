@@ -1,7 +1,6 @@
 import React from "react";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import Icon from "@mdi/react";
 import { mdiBasket } from "@mdi/js";
 import Button from "../Button/Button";
 
@@ -23,12 +22,12 @@ const SliderItem: React.FC<IProps> = ({ title, image, price, description }) => {
               <span className="hero__price">{price}</span>
             </div>
 
-            <p className="paragraph mt-4">{description}</p>
+            <p className="paragraph my-4">{description}</p>
 
             <Button
-              icon={() => <Icon path={mdiBasket} size={0.9} color="white" />}
+              path={mdiBasket}
               style={{ width: "11rem" }}
-              className="mt-4"
+              className="mt-5"
             >
               Shop Now
             </Button>

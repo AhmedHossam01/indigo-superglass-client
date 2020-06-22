@@ -1,13 +1,13 @@
 import React from "react";
 import Navbar from "./components/Navbar/Navbar";
-import HeroSection from "./components/Hero/HeroSection";
+import Home from "./pages/Home/Home";
 
 const App = () => {
   return (
-    <div>
+    <>
       <Navbar />
-      <HeroSection />
-    </div>
+      <Home />
+    </>
   );
 };
 

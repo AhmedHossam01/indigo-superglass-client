@@ -17,6 +17,10 @@ html {
   }
 }
 
+p {
+  margin: 0;
+}
+
 .heading-1 {
   color: $color-dark-2;
   margin: 0;
@@ -28,7 +32,7 @@ html {
 
 .heading-2 {
   font-weight: 500;
-  font-size: 2rem;
+  font-size: 1.7rem;
   line-height: 1.5;
   text-transform: capitalize;
   margin: 0;

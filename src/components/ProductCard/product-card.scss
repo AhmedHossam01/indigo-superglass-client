@@ -1,0 +1,67 @@
+@import "../../styles/utils";
+
+.product-card {
+  &__primary {
+    background-color: $color-light-2;
+    height: 17rem;
+    box-shadow: 0 0 20px -5px rgba($color: #000000, $alpha: 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+
+  &:not(last-of-type) {
+    margin-bottom: 2rem;
+    margin-right: 1rem;
+  }
+
+  &__image {
+    width: 80%;
+    height: 80%;
+    object-fit: contain;
+  }
+
+  &__button {
+    background-color: white;
+    position: absolute;
+    bottom: -8%;
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.2s;
+
+    &--left {
+      left: -8%;
+      color: $color-primary-1;
+
+      &:hover {
+        // TODO: alpha 1.0 (real color) onClick
+        background-color: rgba($color: $color-primary-1, $alpha: 0.6);
+        color: white;
+      }
+    }
+
+    &--right {
+      right: -8%;
+      color: #d2d2d2;
+
+      &:hover {
+        color: $color-warning;
+      }
+    }
+  }
+
+  &__secondary {
+    margin-top: 1.9rem;
+  }
+
+  &__title {
+    font-weight: 600;
+    color: $color-dark-2;
+  }
+}

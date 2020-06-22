@@ -6,6 +6,8 @@ import Container from "react-bootstrap/Container";
 import Icon from "@mdi/react";
 import { mdiAccount, mdiCart, mdiMagnify } from "@mdi/js";
 
+// TODO: make the navbar sticky or at least a cart that appears when scrolling down and fixed in the bottom
+
 const AppNavbar = () => {
   return (
     <Navbar expand="lg">
